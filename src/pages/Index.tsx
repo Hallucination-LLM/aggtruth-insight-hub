@@ -334,7 +334,7 @@ const Index = () => {
       </div>
       <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact & Credits</h2>
       <p className="text-gray-700 mb-4">
-        Created by a Skibidi Σ AI Research Team at <strong>Wrocław University of Science and Technology</strong>.
+        Created by the Skibidi Σ AI Research Team at <strong>Wrocław University of Science and Technology</strong>.
       </p>
       <p className="text-gray-700 mb-8">
         Supervised by Jan Kocoń, Phd
@@ -368,12 +368,16 @@ const Index = () => {
         <div className="max-w-6xl mx-auto px-6 py-12">
           <div className="text-center">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
+              <div className="flex items-center">
+                <img 
+                  src={`${import.meta.env.BASE_URL}logo.png`}
+                  alt="Skibidi Σ AI Research Team Logo" 
+                  className="w-32 object-contain"
+                />
               </div>
-              <span className="text-xl font-bold text-gray-900">AggTruth</span>
             </div>
-            <p className="text-gray-500 mb-2">Real-Time Hallucination Detection for Language Models</p>
+            {/* <span className="text-xl font-bold text-gray-900 ml-3">AggTruth</span>
+            <p className="text-gray-500 mb-2">Real-Time Hallucination Detection for Language Models</p> */}
             <p className="text-sm text-gray-400">Wrocław University of Science and Technology</p>
           </div>
         </div>

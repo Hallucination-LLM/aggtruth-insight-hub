@@ -113,7 +113,7 @@ const Index = () => {
                     <img 
                       src={`${import.meta.env.BASE_URL}diagram.png`} 
                       alt="Flow Diagram: Attention Aggregation Pipeline"
-                      className="w-full max-w-md mx-auto rounded-lg border border-gray-200 shadow"
+                      className="w-full max-w-3xl mx-auto rounded-lg border border-gray-200 shadow"
                     />
                   </div>
                 </div>
@@ -137,25 +137,22 @@ const Index = () => {
 
   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
     <div className="bg-white rounded-lg shadow p-4 text-center">
-      <p className="text-sm font-semibold mb-2">Sum</p>
       <img
         src={`${import.meta.env.BASE_URL}sum.png`}
         alt="Sum formula"
-        className="mx-auto h-24 object-contain"
+        className="mx-auto h-18 object-contain"
       />
     </div>
 
     <div className="bg-white rounded-lg shadow p-4 text-center">
-      <p className="text-sm font-semibold mb-2">CosSim</p>
       <img
         src={`${import.meta.env.BASE_URL}cossim.png`}
         alt="CosSim formula"
-        className="mx-auto h-24 object-contain"
+        className="mx-auto h-20 object-contain"
       />
     </div>
 
     <div className="bg-white rounded-lg shadow p-4 text-center">
-      <p className="text-sm font-semibold mb-2">Entropy</p>
       <img
         src={`${import.meta.env.BASE_URL}entropy.png`}
         alt="Entropy formula"
@@ -164,11 +161,10 @@ const Index = () => {
     </div>
 
     <div className="bg-white rounded-lg shadow p-4 text-center">
-      <p className="text-sm font-semibold mb-2">JS-Div</p>
       <img
         src={`${import.meta.env.BASE_URL}jsdiv.png`}
         alt="JS-Div formula"
-        className="mx-auto h-24 object-contain"
+        className="mx-auto h-20 object-contain"
       />
     </div>
   </div>

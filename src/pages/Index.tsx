@@ -111,7 +111,7 @@ const Index = () => {
                   <div className="text-center">
                     <h3 className="text-xl font-semibold text-gray-700">Attention Aggregation Pipeline</h3>
                     <img 
-                      src={`${import.meta.env.BASE_URL}diagram.pdf`} 
+                      src={`${import.meta.env.BASE_URL}diagram.png`} 
                       alt="Flow Diagram: Attention Aggregation Pipeline"
                       className="w-full max-w-md mx-auto rounded-lg border border-gray-200 shadow"
                     />
@@ -130,31 +130,50 @@ const Index = () => {
                   🔍 Technical Details
                 </AccordionTrigger>
                 <AccordionContent className="pt-4">
-  <div className="bg-gray-50 rounded-lg p-6 space-y-6">
-    <p className="text-sm text-gray-700">
-      Below are the attention aggregation metrics used in <strong>AggTruth</strong>:
-    </p>
+  <div className="bg-gray-50 rounded-lg p-6">
+  <p className="text-sm text-gray-700 mb-6">
+    Below are the attention aggregation metrics used in <strong>AggTruth</strong>:
+  </p>
 
-    <div className="text-center">
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <div className="bg-white rounded-lg shadow p-4 text-center">
       <p className="text-sm font-semibold mb-2">Sum</p>
-      <img src={`${import.meta.env.BASE_URL}sum.png`} alt="Sum formula" className="mx-auto max-w-xs" />
+      <img
+        src={`${import.meta.env.BASE_URL}sum.png`}
+        alt="Sum formula"
+        className="mx-auto h-24 object-contain"
+      />
     </div>
 
-    <div className="text-center">
+    <div className="bg-white rounded-lg shadow p-4 text-center">
       <p className="text-sm font-semibold mb-2">CosSim</p>
-      <img src={`${import.meta.env.BASE_URL}cossim.png`} alt="CosSim formula" className="mx-auto max-w-xs" />
+      <img
+        src={`${import.meta.env.BASE_URL}cossim.png`}
+        alt="CosSim formula"
+        className="mx-auto h-24 object-contain"
+      />
     </div>
 
-    <div className="text-center">
+    <div className="bg-white rounded-lg shadow p-4 text-center">
       <p className="text-sm font-semibold mb-2">Entropy</p>
-      <img src={`${import.meta.env.BASE_URL}entropy.png`} alt="Entropy formula" className="mx-auto max-w-xs" />
+      <img
+        src={`${import.meta.env.BASE_URL}entropy.png`}
+        alt="Entropy formula"
+        className="mx-auto h-24 object-contain"
+      />
     </div>
 
-    <div className="text-center">
+    <div className="bg-white rounded-lg shadow p-4 text-center">
       <p className="text-sm font-semibold mb-2">JS-Div</p>
-      <img src={`${import.meta.env.BASE_URL}jsdiv.png`} alt="JS-Div formula" className="mx-auto max-w-xs" />
+      <img
+        src={`${import.meta.env.BASE_URL}jsdiv.png`}
+        alt="JS-Div formula"
+        className="mx-auto h-24 object-contain"
+      />
     </div>
   </div>
+</div>
+
 </AccordionContent>
 
               </AccordionItem>

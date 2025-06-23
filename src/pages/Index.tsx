@@ -41,26 +41,24 @@ const Index = () => {
           <div className="text-center max-w-4xl mx-auto">
             <Badge className="mb-6 bg-blue-100 text-blue-700 hover:bg-blue-100">
               <Award className="w-4 h-4 mr-2" />
-              ICCS 2025 • Real-Time AI Safety
+              ICCS 2025 • RAG Workshop
             </Badge>
             
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               <span className="block">AggTruth</span>
+            </h1>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
               <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
                 Real-Time Hallucination Detection
               </span>
-            </h1>
+            </h2>
             
             <p className="text-xl text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto">
-              🧪 A novel method that detects hallucinations in LLMs during inference, using attention map aggregation. 
+              🧪 A novel method that detects hallucinations in LLMs during inference. 
               Accurate, fast, lightweight – and ready for real-time use.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                <Video className="w-5 h-5 mr-2" />
-                Watch Demo
-              </Button>
               <Button size="lg" variant="outline">
                 <FileText className="w-5 h-5 mr-2" />
                 Read Paper
@@ -109,11 +107,14 @@ const Index = () => {
           <Card className="p-8 shadow-lg border-0 mb-8">
             <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 mb-6">
               <div className="text-center">
-                <div className="w-full h-64 bg-white rounded-lg border-2 border-dashed border-blue-300 flex items-center justify-center mb-4">
+                <div className="w-full h-auto bg-white rounded-lg border-2 border-dashed border-blue-300 flex items-center justify-center mb-4">
                   <div className="text-center">
-                    <Brain className="w-16 h-16 text-blue-400 mx-auto mb-4" />
                     <h3 className="text-xl font-semibold text-gray-700">Attention Aggregation Pipeline</h3>
-                    <p className="text-gray-500">[Flow Diagram Placeholder]</p>
+                    <img 
+                      src="/diagram.pdf" 
+                      alt="Flow Diagram: Attention Aggregation Pipeline"
+                      className="w-full max-w-md mx-auto rounded-lg border border-gray-200 shadow"
+                    />
                   </div>
                 </div>
                 <p className="text-gray-700">
@@ -126,28 +127,36 @@ const Index = () => {
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="technical-details">
                 <AccordionTrigger className="text-lg font-semibold">
-                  🔍 Technical Details & Pseudocode
+                  🔍 Technical Details
                 </AccordionTrigger>
                 <AccordionContent className="pt-4">
-                  <div className="bg-gray-50 rounded-lg p-6">
-                    <pre className="text-sm text-gray-700 whitespace-pre-wrap">
-{`def detect_hallucination(attention_maps, context_tokens, threshold=0.3):
-    """
-    AggTruth hallucination detection algorithm
-    """
-    # Step 1: Aggregate attention to context tokens
-    context_attention = sum(attention_maps[:, context_tokens])
-    
-    # Step 2: Calculate trust score
-    trust_score = context_attention / len(context_tokens)
-    
-    # Step 3: Apply threshold
-    is_hallucination = trust_score < threshold
-    
-    return is_hallucination, trust_score`}
-                    </pre>
-                  </div>
-                </AccordionContent>
+  <div className="bg-gray-50 rounded-lg p-6 space-y-6">
+    <p className="text-sm text-gray-700">
+      Below are the attention aggregation metrics used in <strong>AggTruth</strong>:
+    </p>
+
+    <div className="text-center">
+      <p className="text-sm font-semibold mb-2">Sum</p>
+      <img src="/formulas/sum.png" alt="Sum formula" className="mx-auto max-w-xs" />
+    </div>
+
+    <div className="text-center">
+      <p className="text-sm font-semibold mb-2">CosSim</p>
+      <img src="/formulas/cossim.png" alt="CosSim formula" className="mx-auto max-w-xs" />
+    </div>
+
+    <div className="text-center">
+      <p className="text-sm font-semibold mb-2">Entropy</p>
+      <img src="/formulas/entropy.png" alt="Entropy formula" className="mx-auto max-w-xs" />
+    </div>
+
+    <div className="text-center">
+      <p className="text-sm font-semibold mb-2">JS-Div</p>
+      <img src="/formulas/jsdiv.png" alt="JS-Div formula" className="mx-auto max-w-xs" />
+    </div>
+  </div>
+</AccordionContent>
+
               </AccordionItem>
             </Accordion>
           </Card>

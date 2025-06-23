@@ -88,12 +88,11 @@ const Index = () => {
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 leading-relaxed mb-4">
                 Hallucinations in large language models undermine their reliability, especially in 
-                <strong className="text-amber-700"> scientific, legal, and financial contexts</strong>. 
-                Current detection methods are slow or only work post-hoc.
+                <strong className="text-amber-700"> scientific, legal, and financial contexts</strong>.
               </p>
               <p className="text-gray-700 leading-relaxed">
                 AggTruth explores whether hallucinations can be detected <em>as the model generates text</em>, 
-                helping pave the way for safer, real-time AI systems.
+                helping pave the way for safer AI systems.
               </p>
             </div>
           </Card>
@@ -120,8 +119,7 @@ const Index = () => {
                   </div>
                 </div>
                 <p className="text-gray-700">
-                  The method analyzes attention maps during decoding, aggregating attention to source/context tokens 
-                  and identifying hallucinations when attention drops below a trust threshold.
+                  The method analyzes attention maps during decoding, aggregating attention and identifying hallucinations.
                 </p>
               </div>
             </div>
@@ -134,7 +132,7 @@ const Index = () => {
                   <AccordionContent className="pt-4">
                     <div className="bg-gray-50 rounded-lg p-6">
                       <p className="text-sm text-gray-700 mb-6">
-                        Below are the attention aggregation metrics used in <strong>AggTruth</strong>:
+                        Below are the attention aggregation techniques used in <strong>AggTruth</strong>:
                       </p>
                     
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

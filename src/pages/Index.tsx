@@ -136,38 +136,35 @@ const Index = () => {
   </p>
 
   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-    <div className="bg-white rounded-lg shadow p-4 text-center">
-      <img
-        src={`${import.meta.env.BASE_URL}sum.svg`}
-        alt="Sum formula"
-        className="mx-auto h-16 object-contain"
-      />
-    </div>
-
-    <div className="bg-white rounded-lg shadow p-4 text-center">
-      <img
-        src={`${import.meta.env.BASE_URL}cossim.svg`}
-        alt="CosSim formula"
-        className="mx-auto h-14 object-contain"
-      />
-    </div>
-
-    <div className="bg-white rounded-lg shadow p-4 text-center">
-      <img
-        src={`${import.meta.env.BASE_URL}entropy.svg`}
-        alt="Entropy formula"
-        className="mx-auto h-16 object-contain"
-      />
-    </div>
-
-    <div className="bg-white rounded-lg shadow p-4 text-center">
-      <img
-        src={`${import.meta.env.BASE_URL}jsdiv.svg`}
-        alt="JS-Div formula"
-        className="mx-auto h-18 object-contain"
-      />
-    </div>
+    {[
+      { name: "Sum", file: "sum.pdf" },
+      { name: "CosSim", file: "cossim.pdf" },
+      { name: "Entropy", file: "entropy.pdf" },
+      { name: "JS-Div", file: "jsdiv.pdf" },
+    ].map(({ name, file }) => (
+      <div
+        key={file}
+        className="bg-white rounded-lg shadow p-4 text-center flex flex-col items-center"
+      >
+        <p className="text-sm font-semibold mb-2">{name}</p>
+        <iframe
+          src={`${import.meta.env.BASE_URL}${file}`}
+          title={`${name} formula`}
+          className="w-full h-40 border border-gray-200 rounded"
+        />
+        <a
+          href={`${import.meta.env.BASE_URL}${file}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-2 text-xs text-blue-600 underline"
+        >
+          Open full view
+        </a>
+      </div>
+    ))}
   </div>
+</div>
+
 </div>
 
 </AccordionContent>

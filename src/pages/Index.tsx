@@ -111,7 +111,7 @@ const Index = () => {
                   <div className="text-center">
                     <h3 className="text-xl font-semibold text-gray-700">Attention Aggregation Pipeline</h3>
                     <img 
-                      src={`${import.meta.env.BASE_URL}diagram.png`} 
+                      src={`${import.meta.env.BASE_URL}diagram.svg`} 
                       alt="Flow Diagram: Attention Aggregation Pipeline"
                       className="w-full max-w-full mx-auto rounded-lg border border-gray-200 shadow"
                     />
@@ -138,7 +138,7 @@ const Index = () => {
   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
     <div className="bg-white rounded-lg shadow p-4 text-center">
       <img
-        src={`${import.meta.env.BASE_URL}sum.png`}
+        src={`${import.meta.env.BASE_URL}sum.svg`}
         alt="Sum formula"
         className="mx-auto h-16 object-contain"
       />
@@ -146,7 +146,7 @@ const Index = () => {
 
     <div className="bg-white rounded-lg shadow p-4 text-center">
       <img
-        src={`${import.meta.env.BASE_URL}cossim.png`}
+        src={`${import.meta.env.BASE_URL}cossim.svg`}
         alt="CosSim formula"
         className="mx-auto h-14 object-contain"
       />
@@ -154,7 +154,7 @@ const Index = () => {
 
     <div className="bg-white rounded-lg shadow p-4 text-center">
       <img
-        src={`${import.meta.env.BASE_URL}entropy.png`}
+        src={`${import.meta.env.BASE_URL}entropy.svg`}
         alt="Entropy formula"
         className="mx-auto h-16 object-contain"
       />
@@ -162,7 +162,7 @@ const Index = () => {
 
     <div className="bg-white rounded-lg shadow p-4 text-center">
       <img
-        src={`${import.meta.env.BASE_URL}jsdiv.png`}
+        src={`${import.meta.env.BASE_URL}jsdiv.svg`}
         alt="JS-Div formula"
         className="mx-auto h-18 object-contain"
       />

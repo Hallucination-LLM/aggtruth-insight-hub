@@ -113,7 +113,7 @@ const Index = () => {
                     <img 
                       src={`${import.meta.env.BASE_URL}diagram.png`} 
                       alt="Flow Diagram: Attention Aggregation Pipeline"
-                      className="w-full max-w-3xl mx-auto rounded-lg border border-gray-200 shadow"
+                      className="w-full max-w-full mx-auto rounded-lg border border-gray-200 shadow"
                     />
                   </div>
                 </div>
@@ -140,7 +140,7 @@ const Index = () => {
       <img
         src={`${import.meta.env.BASE_URL}sum.png`}
         alt="Sum formula"
-        className="mx-auto h-18 object-contain"
+        className="mx-auto h-16 object-contain"
       />
     </div>
 
@@ -148,7 +148,7 @@ const Index = () => {
       <img
         src={`${import.meta.env.BASE_URL}cossim.png`}
         alt="CosSim formula"
-        className="mx-auto h-20 object-contain"
+        className="mx-auto h-14 object-contain"
       />
     </div>
 
@@ -156,7 +156,7 @@ const Index = () => {
       <img
         src={`${import.meta.env.BASE_URL}entropy.png`}
         alt="Entropy formula"
-        className="mx-auto h-24 object-contain"
+        className="mx-auto h-16 object-contain"
       />
     </div>
 
@@ -164,7 +164,7 @@ const Index = () => {
       <img
         src={`${import.meta.env.BASE_URL}jsdiv.png`}
         alt="JS-Div formula"
-        className="mx-auto h-20 object-contain"
+        className="mx-auto h-18 object-contain"
       />
     </div>
   </div>

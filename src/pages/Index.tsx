@@ -343,7 +343,7 @@ const Index = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto">
         <div className="flex items-center justify-center text-sm text-gray-600">
           <Mail className="w-4 h-4 mr-2 text-blue-500" />
-          TODO: Piotrek
+          piotr.matys@asseco.pl
         </div>
         <div className="flex items-center justify-center text-sm text-gray-600">
           <Mail className="w-4 h-4 mr-2 text-blue-500" />

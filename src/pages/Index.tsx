@@ -150,7 +150,7 @@ const Index = () => {
                           <img
                             src={`${import.meta.env.BASE_URL}cossim.png`}
                             alt="CosSim formula"
-                            className="h-44 object-contain"
+                            className="h-40 object-contain"
                           />
                         </div>
                     
@@ -168,7 +168,7 @@ const Index = () => {
                           <img
                             src={`${import.meta.env.BASE_URL}jsdiv.png`}
                             alt="JS-Div formula"
-                            className="h-52 object-contain"
+                            className="h-40 object-contain"
                           />
                         </div>
                       </div>

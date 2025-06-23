@@ -111,7 +111,7 @@ const Index = () => {
                   <div className="text-center">
                     <h3 className="text-xl font-semibold text-gray-700">Attention Aggregation Pipeline</h3>
                     <img 
-                      src="/diagram.pdf" 
+                      src={`${import.meta.env.BASE_URL}diagram.pdf`} 
                       alt="Flow Diagram: Attention Aggregation Pipeline"
                       className="w-full max-w-md mx-auto rounded-lg border border-gray-200 shadow"
                     />
@@ -137,22 +137,22 @@ const Index = () => {
 
     <div className="text-center">
       <p className="text-sm font-semibold mb-2">Sum</p>
-      <img src="/sum.png" alt="Sum formula" className="mx-auto max-w-xs" />
+      <img src={`${import.meta.env.BASE_URL}sum.png`} alt="Sum formula" className="mx-auto max-w-xs" />
     </div>
 
     <div className="text-center">
       <p className="text-sm font-semibold mb-2">CosSim</p>
-      <img src="/cossim.png" alt="CosSim formula" className="mx-auto max-w-xs" />
+      <img src={`${import.meta.env.BASE_URL}cossim.png`} alt="CosSim formula" className="mx-auto max-w-xs" />
     </div>
 
     <div className="text-center">
       <p className="text-sm font-semibold mb-2">Entropy</p>
-      <img src="/entropy.png" alt="Entropy formula" className="mx-auto max-w-xs" />
+      <img src={`${import.meta.env.BASE_URL}entropy.png`} alt="Entropy formula" className="mx-auto max-w-xs" />
     </div>
 
     <div className="text-center">
       <p className="text-sm font-semibold mb-2">JS-Div</p>
-      <img src="/jsdiv.png" alt="JS-Div formula" className="mx-auto max-w-xs" />
+      <img src={`${import.meta.env.BASE_URL}jsdiv.png`} alt="JS-Div formula" className="mx-auto max-w-xs" />
     </div>
   </div>
 </AccordionContent>

@@ -136,42 +136,39 @@ const Index = () => {
                       </p>
                     
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        {/* Sum */}
-                        <div className="bg-white rounded-lg shadow p-4 flex flex-col items-center">
-                          <img
-                            src={`${import.meta.env.BASE_URL}sum.png`}
-                            alt="Sum formula"
-                            className="h-50 object-contain"
-                          />
-                        </div>
-                    
-                        {/* CosSim */}
-                        <div className="bg-white rounded-lg shadow p-4 flex flex-col items-center">
-                          <img
-                            src={`${import.meta.env.BASE_URL}cossim.png`}
-                            alt="CosSim formula"
-                            className="h-50 object-contain"
-                          />
-                        </div>
-                    
-                        {/* Entropy */}
-                        <div className="bg-white rounded-lg shadow p-4 flex flex-col items-center">
-                          <img
-                            src={`${import.meta.env.BASE_URL}entropy.png`}
-                            alt="Entropy formula"
-                            className="h-50 object-contain"
-                          />
-                        </div>
-                    
-                        {/* JS-Div */}
-                        <div className="bg-white rounded-lg shadow p-4 flex flex-col items-center">
-                          <img
-                            src={`${import.meta.env.BASE_URL}jsdiv.png`}
-                            alt="JS-Div formula"
-                            className="h-50 object-contain"
-                          />
-                        </div>
-                      </div>
+  <div className="bg-white rounded-lg shadow p-4 flex items-center justify-center h-48">
+    <img
+      src={`${import.meta.env.BASE_URL}sum.png`}
+      alt="Sum formula"
+      className="scale-150 object-contain"
+    />
+  </div>
+
+  <div className="bg-white rounded-lg shadow p-4 flex items-center justify-center h-48">
+    <img
+      src={`${import.meta.env.BASE_URL}cossim.png`}
+      alt="CosSim formula"
+      className="scale-150 object-contain"
+    />
+  </div>
+
+  <div className="bg-white rounded-lg shadow p-4 flex items-center justify-center h-48">
+    <img
+      src={`${import.meta.env.BASE_URL}entropy.png`}
+      alt="Entropy formula"
+      className="scale-150 object-contain"
+    />
+  </div>
+
+  <div className="bg-white rounded-lg shadow p-4 flex items-center justify-center h-48">
+    <img
+      src={`${import.meta.env.BASE_URL}jsdiv.png`}
+      alt="JS-Div formula"
+      className="scale-150 object-contain"
+    />
+  </div>
+</div>
+
                     </div>
                 </AccordionContent>
 

@@ -299,7 +299,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { icon: BookOpen, title: "Paper (ICCS 2025)", desc: "PDF Document", color: "blue", url: "https://example.com/paper.pdf" },
-              { icon: FileImage, title: "Poster", desc: "AI Forum Poster", color: "green", url: "https://example.com/poster.pdf" },
+              { icon: FileImage, title: "Poster", desc: "AI Forum Poster", color: "green", url: "poster.pdf" },
               { icon: FileText, title: "Piotr Matys - Thesis", desc: "PDF Document", color: "orange", url: "thesis_piotrek.pdf" },
               { icon: FileText, title: "Konrad Kiełczyński - Thesis", desc: "PDF Document", color: "orange", url: "thesis_konrad.pdf" },
               { icon: FileText, title: "Mikołaj Langner - Thesis", desc: "PDF Document", color: "orange", url: "thesis_mikolaj.pdf" },

@@ -131,38 +131,35 @@ const Index = () => {
                 </AccordionTrigger>
                   <AccordionContent className="pt-4">
                     <div className="bg-gray-50 rounded-lg p-6">
-                    <p className="text-sm text-gray-700 mb-6">
-                      Below are the attention aggregation metrics used in <strong>AggTruth</strong>:
-                    </p>
-                
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      {[
-                        { name: "Sum", file: "sum.pdf" },
-                        { name: "CosSim", file: "cossim.pdf" },
-                        { name: "Entropy", file: "entropy.pdf" },
-                        { name: "JS-Div", file: "jsdiv.pdf" },
-                      ].map(({ name, file }) => (
-                        <div
-                          key={file}
-                          className="bg-white rounded-lg shadow p-4 text-center flex flex-col items-center"
-                        >
-                          <iframe
-                            src={`${import.meta.env.BASE_URL}${file}`}
-                            title={`${name} formula`}
-                            className="w-full h-40 border border-gray-200 rounded"
-                          />
-                          <a
-                            href={`${import.meta.env.BASE_URL}${file}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="mt-2 text-xs text-blue-600 underline"
-                          >
-                            Open full view
-                          </a>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+  <p className="text-sm text-gray-700 mb-6">
+    Below are the attention aggregation metrics used in <strong>AggTruth</strong>:
+  </p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    {[
+      { name: "Sum", file: "sum.pdf" },
+      { name: "CosSim", file: "cossim.pdf" },
+      { name: "Entropy", file: "entropy.pdf" },
+      { name: "JS-Div", file: "jsdiv.pdf" },
+    ].map(({ name, file }) => (
+      <div
+        key={file}
+        className="bg-white rounded-lg shadow p-4 flex flex-col items-center"
+      >
+        <p className="text-sm font-semibold mb-3">{name}</p>
+
+        {/* iframe z powiększeniem i białym tłem */}
+        <iframe
+          src={`${import.meta.env.BASE_URL}${file}`}
+          title={`${name} formula`}
+          className="w-full h-60 border border-gray-200 rounded transform scale-150 origin-center"
+          style={{ backgroundColor: "white" }}
+        />
+      </div>
+    ))}
+  </div>
+</div>
+
 
                 </AccordionContent>
 

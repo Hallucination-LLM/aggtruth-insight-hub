@@ -141,7 +141,7 @@ const Index = () => {
                           <img
                             src={`${import.meta.env.BASE_URL}sum.png`}
                             alt="Sum formula"
-                            className="h-40 object-contain"
+                            className="h-50 object-contain"
                           />
                         </div>
                     
@@ -150,7 +150,7 @@ const Index = () => {
                           <img
                             src={`${import.meta.env.BASE_URL}cossim.png`}
                             alt="CosSim formula"
-                            className="h-40 object-contain"
+                            className="h-50 object-contain"
                           />
                         </div>
                     
@@ -159,7 +159,7 @@ const Index = () => {
                           <img
                             src={`${import.meta.env.BASE_URL}entropy.png`}
                             alt="Entropy formula"
-                            className="h-40 object-contain"
+                            className="h-50 object-contain"
                           />
                         </div>
                     
@@ -168,7 +168,7 @@ const Index = () => {
                           <img
                             src={`${import.meta.env.BASE_URL}jsdiv.png`}
                             alt="JS-Div formula"
-                            className="h-40 object-contain"
+                            className="h-50 object-contain"
                           />
                         </div>
                       </div>

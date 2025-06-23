@@ -26,10 +26,12 @@ const Index = () => {
               <a href="#method" className="text-gray-600 hover:text-blue-600 transition-colors">Method</a>
               <a href="#results" className="text-gray-600 hover:text-blue-600 transition-colors">Results</a>
               <a href="#resources" className="text-gray-600 hover:text-blue-600 transition-colors">Resources</a>
-              <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
-                <Github className="w-4 h-4 mr-2" />
-                GitHub
-              </Button>
+              <a href="https://github.com/Hallucination-LLM/Research" target="_blank" rel="noopener noreferrer">
+                <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
+                  <Github className="w-4 h-4 mr-2" />
+                  GitHub
+                </Button>
+              </a>
             </div>
           </div>
         </div>

@@ -146,7 +146,6 @@ const Index = () => {
         key={file}
         className="bg-white rounded-lg shadow p-4 text-center flex flex-col items-center"
       >
-        <p className="text-sm font-semibold mb-2">{name}</p>
         <iframe
           src={`${import.meta.env.BASE_URL}${file}`}
           title={`${name} formula`}

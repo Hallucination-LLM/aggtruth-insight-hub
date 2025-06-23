@@ -137,22 +137,22 @@ const Index = () => {
 
     <div className="text-center">
       <p className="text-sm font-semibold mb-2">Sum</p>
-      <img src="/formulas/sum.png" alt="Sum formula" className="mx-auto max-w-xs" />
+      <img src="/sum.png" alt="Sum formula" className="mx-auto max-w-xs" />
     </div>
 
     <div className="text-center">
       <p className="text-sm font-semibold mb-2">CosSim</p>
-      <img src="/formulas/cossim.png" alt="CosSim formula" className="mx-auto max-w-xs" />
+      <img src="/cossim.png" alt="CosSim formula" className="mx-auto max-w-xs" />
     </div>
 
     <div className="text-center">
       <p className="text-sm font-semibold mb-2">Entropy</p>
-      <img src="/formulas/entropy.png" alt="Entropy formula" className="mx-auto max-w-xs" />
+      <img src="/entropy.png" alt="Entropy formula" className="mx-auto max-w-xs" />
     </div>
 
     <div className="text-center">
       <p className="text-sm font-semibold mb-2">JS-Div</p>
-      <img src="/formulas/jsdiv.png" alt="JS-Div formula" className="mx-auto max-w-xs" />
+      <img src="/jsdiv.png" alt="JS-Div formula" className="mx-auto max-w-xs" />
     </div>
   </div>
 </AccordionContent>

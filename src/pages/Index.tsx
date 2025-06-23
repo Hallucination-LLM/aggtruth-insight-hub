@@ -1,5 +1,5 @@
 
-import { ExternalLink, Github, FileText, Video, Database, ChevronDown, ChevronRight, Brain, Zap, Target, TrendingUp, CheckCircle, Users, Award, Mail } from "lucide-react";
+import { ExternalLink, Github, FileText, Video, Database, BookOpen, FileImage, ChevronDown, ChevronRight, Brain, Zap, Target, TrendingUp, CheckCircle, Users, Award, Mail } from "lucide-react";
 import { useState } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -25,7 +25,7 @@ const Index = () => {
               <a href="#overview" className="text-gray-600 hover:text-blue-600 transition-colors">Overview</a>
               <a href="#method" className="text-gray-600 hover:text-blue-600 transition-colors">Method</a>
               <a href="#results" className="text-gray-600 hover:text-blue-600 transition-colors">Results</a>
-              <a href="#resources" className="text-gray-600 hover:text-blue-600 transition-colors">Resources</a>
+              <a href="#artifacts" className="text-gray-600 hover:text-blue-600 transition-colors">Artifacts</a>
               <a href="https://github.com/Hallucination-LLM/Research" target="_blank" rel="noopener noreferrer">
                 <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
                   <Github className="w-4 h-4 mr-2" />
@@ -110,7 +110,7 @@ const Index = () => {
               <div className="text-center">
                 <div className="w-full h-auto bg-white rounded-lg border-2 border-dashed border-blue-300 flex items-center justify-center mb-4">
                   <div className="text-center">
-                    <h3 className="text-xl font-semibold text-gray-700">Attention Aggregation Pipeline</h3>
+                    <h3 className="text-xl font-semibold text-gray-700 mt-4 mb-4">Attention Aggregation Pipeline</h3>
                     <img 
                       src={`${import.meta.env.BASE_URL}diagram.svg`} 
                       alt="Flow Diagram: Attention Aggregation Pipeline"
@@ -180,18 +180,18 @@ const Index = () => {
         {/* What We Built */}
         <section className="mb-16">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">🚀 What We Built</h2>
-            <p className="text-lg text-gray-600">Comprehensive implementation and evaluation</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">🚀 Key features</h2>
+            <p className="text-lg text-gray-600">Fast and accurate detection tailored for diverse models and datasets.</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: "⚡", title: "Attention Module", desc: "Custom PyTorch implementation" },
-              { icon: "📊", title: "Evaluation Pipeline", desc: "3 tasks: QA, summarization, retrieval" },
-              { icon: "🤖", title: "Multi-Model Support", desc: "GPT-2, LLaMA, Mixtral benchmarks" },
-              { icon: "🔗", title: "RAG Integration", desc: "Seamless retrieval augmentation" },
-              { icon: "⏱️", title: "Real-Time Prototype", desc: "Live detection during inference" },
-              { icon: "🧪", title: "Research Tools", desc: "Analysis & visualization suite" }
+              { icon: "⚡", title: "Online Detection", desc: "Enables real-time evaluation of partial outputs during generation." },
+              { icon: "📊", title: "Arbitrary Window Length", desc: "Efficiently scales across varying fragment sizes under evaluation." },
+              { icon: "🤖", title: "Multi-Model Support", desc: "Compatible with LLaMA, Phi, Gemma models." },
+              { icon: "🌐", title: "High Generalizability", desc: "Demonstrates robustness across diverse tasks and datasets." },
+              { icon: "🏆", title: "State-of-the-Art Performance", desc: "Surpasses previous state-of-the-art solutions." },
+              { icon: "🛠️", title: "Automated Evaluation Pipeline", desc: "Facilitates systematic benchmarking and comparison of method variants." }
             ].map((item, index) => (
               <Card key={index} className="p-6 hover:shadow-lg transition-shadow border-0 bg-gradient-to-br from-white to-gray-50">
                 <div className="text-center">
@@ -209,38 +209,45 @@ const Index = () => {
         <section id="results" className="mb-16">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">📊 Results</h2>
-            <p className="text-lg text-gray-600">Performance comparison with state-of-the-art methods</p>
+            <p className="text-lg text-gray-600">Comparison across different LLMs, tasks and datasets</p>
           </div>
 
           <Card className="p-8 shadow-lg border-0">
             <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-8 mb-8">
-              <div className="w-full h-80 bg-white rounded-lg border-2 border-dashed border-green-300 flex items-center justify-center mb-6">
+              <div className="w-full h-200 bg-white rounded-lg border-2 border-dashed border-green-300 flex items-center justify-center mb-6">
                 <div className="text-center">
-                  <TrendingUp className="w-16 h-16 text-green-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-700">AggTruth vs SOTA Comparison</h3>
-                  <p className="text-gray-500">[Bar Chart/Radar Chart Placeholder]</p>
-                  <p className="text-sm text-gray-400 mt-2">Metrics: Accuracy, Runtime, Cross-lingual Stability</p>
+                  <h3 className="text-xl font-semibold text-gray-700 mt-4 mb-4">AggTruth Compared To Baselines</h3>
+                  <img 
+                    src={`${import.meta.env.BASE_URL}high.png`} 
+                    alt="AggTruth vs SOTA Comparison" 
+                    className="max-w-full max-h-full object-contain"
+                  />
                 </div>
               </div>
+              <p className="text-gray-700 text-center">
+                AggTruth Sum consistently delivers high and most stable AUCROC across all tasks and datasets, showing robustness to different training data. AggTruth, unlike hidden state-based baselines, tend to generalize better and avoid overfitting, resulting in improved performance on out-of-domain data. Lookback-Lens experiences a significant drop in performance in certain settings, highlighting its instability. Overall, AggTruth methods outperform baselines, with AggTruth JS-DIV leading on Phi-3.5 and Llama-3, and AggTruth Sum excelling on Gemma-2.
+              </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6">
+            
+
+            {/* <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center p-6 bg-green-50 rounded-xl">
-                <div className="text-3xl font-bold text-green-600 mb-2">↑ 15%</div>
-                <div className="font-semibold text-gray-900">Accuracy</div>
-                <div className="text-sm text-gray-600">vs FaithScore, DetectGPT</div>
+                <div className="text-3xl font-bold text-green-600 mb-2">75%</div>
+                <div className="font-semibold text-gray-900">Top Performing</div>
+                <div className="text-sm text-gray-600">Ranked #1 in 75% of Experiments</div>
               </div>
               <div className="text-center p-6 bg-blue-50 rounded-xl">
-                <div className="text-3xl font-bold text-blue-600 mb-2">↑ 85%</div>
-                <div className="font-semibold text-gray-900">Cross-task Robustness</div>
-                <div className="text-sm text-gray-600">QA, Summarization, RAG</div>
+                <div className="text-3xl font-bold text-blue-600 mb-2">0.85 AUC</div>
+                <div className="font-semibold text-gray-900">Classification Accuracy</div>
+                <div className="text-sm text-gray-600">For Llama-3.1</div>
               </div>
               <div className="text-center p-6 bg-purple-50 rounded-xl">
                 <div className="text-3xl font-bold text-purple-600 mb-2">↓ 40ms</div>
                 <div className="font-semibold text-gray-900">Latency</div>
                 <div className="text-sm text-gray-600">Real-time capable</div>
               </div>
-            </div>
+            </div> */}
           </Card>
         </section>
 
@@ -257,47 +264,46 @@ const Index = () => {
               </div>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-4">
-              <div className="flex items-center gap-3 p-4 bg-white rounded-lg">
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="flex items-center gap-3 p-6 bg-white rounded-lg">
                 <span className="text-xl">📍</span>
                 <div>
-                  <div className="font-semibold text-gray-900">ICCS 2025</div>
+                  <div className="font-semibold text-gray-900">ICCS 2025, Singapore</div>
                   <div className="text-sm text-gray-600">International Conference on Computational Science</div>
                 </div>
               </div>
-              <div className="flex items-center gap-3 p-4 bg-white rounded-lg">
+              <div className="flex items-center gap-3 p-6 bg-white rounded-lg">
                 <span className="text-xl">📍</span>
                 <div>
-                  <div className="font-semibold text-gray-900">AI Research Seminar</div>
-                  <div className="text-sm text-gray-600">2024</div>
+                  <div className="font-semibold text-gray-900">AI Forum, Wrocław Tech</div>
+                  <div className="text-sm text-gray-600">Summary of Research Projects by Master's Students in AI</div>
                 </div>
               </div>
-              <div className="flex items-center gap-3 p-4 bg-white rounded-lg">
+              {/* <div className="flex items-center gap-3 p-4 bg-white rounded-lg">
                 <span className="text-xl">📍</span>
                 <div>
                   <div className="font-semibold text-gray-900">Master's Thesis</div>
                   <div className="text-sm text-gray-600">WUST</div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </Card>
         </section>
 
-        {/* Resources */}
-        <section id="resources" className="mb-16">
+        {/* artifacts */}
+        <section id="artifacts" className="mb-16">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">🔗 Resources</h2>
-            <p className="text-lg text-gray-600">Papers, code, datasets, and more</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">🔗 Artifacts</h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: Video, title: "Demo Video", desc: "YouTube", color: "red", url: "https://youtube.com/yourdemo" },
-              { icon: FileText, title: "Paper (ICCS 2025)", desc: "PDF Document", color: "blue", url: "https://example.com/paper.pdf" },
-              { icon: FileText, title: "Poster", desc: "PDF Document", color: "green", url: "https://example.com/poster.pdf" },
-              { icon: Github, title: "GitHub Repository", desc: "Source Code", color: "gray", url: "https://github.com/yourusername/aggtruth" },
-              { icon: Database, title: "Dataset", desc: "ZIP Archive", color: "purple", url: "https://example.com/dataset.zip" },
-              { icon: FileText, title: "Slides", desc: "PDF Document", color: "orange", url: "https://example.com/slides.pdf" }
+              { icon: BookOpen, title: "Paper (ICCS 2025)", desc: "PDF Document", color: "blue", url: "https://example.com/paper.pdf" },
+              { icon: FileImage, title: "Poster", desc: "AI Forum Poster", color: "green", url: "https://example.com/poster.pdf" },
+              { icon: FileText, title: "Piotr Matys - Thesis", desc: "PDF Document", color: "orange", url: "thesis_piotrek.pdf" },
+              { icon: FileText, title: "Konrad Kiełczyński - Thesis", desc: "PDF Document", color: "orange", url: "thesis_konrad.pdf" },
+              { icon: FileText, title: "Mikołaj Langner - Thesis", desc: "PDF Document", color: "orange", url: "thesis_mikolaj.pdf" },
+              { icon: FileText, title: "Jan Eliasz - Thesis", desc: "PDF Document", color: "orange", url: "thesis_janek.pdf" }
             ].map((resource, index) => (
               <Card key={index} className="group hover:shadow-lg transition-all duration-200 border-0">
                 <CardContent className="p-6">
@@ -321,25 +327,40 @@ const Index = () => {
 
         {/* Contact */}
         <section className="mb-16">
-          <Card className="p-8 shadow-lg border-0 bg-gradient-to-br from-blue-50 to-indigo-50">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-3xl">📬</span>
-              </div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact & Credits</h2>
-              <p className="text-gray-700 mb-4">
-                Created by a student AI research team at <strong>Wrocław University of Science and Technology</strong>.
-              </p>
-              <p className="text-gray-700 mb-6">
-                Supervised by Dr. XYZ
-              </p>
-              <Button className="bg-blue-600 hover:bg-blue-700">
-                <Mail className="w-4 h-4 mr-2" />
-                your-email@example.com
-              </Button>
-            </div>
-          </Card>
-        </section>
+  <Card className="p-8 shadow-lg border-0 bg-gradient-to-br from-blue-50 to-indigo-50">
+    <div className="text-center">
+      <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+        <span className="text-3xl">📬</span>
+      </div>
+      <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact & Credits</h2>
+      <p className="text-gray-700 mb-4">
+        Created by a student AI research team at <strong>Wrocław University of Science and Technology</strong>.
+      </p>
+      <p className="text-gray-700 mb-8">
+        Supervised by Jan Kocoń, Phd
+      </p>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto">
+        <div className="flex items-center justify-center text-sm text-gray-600">
+          <Mail className="w-4 h-4 mr-2 text-blue-500" />
+          TODO: Piotrek
+        </div>
+        <div className="flex items-center justify-center text-sm text-gray-600">
+          <Mail className="w-4 h-4 mr-2 text-blue-500" />
+          jan.eliasz@pwr.edu.pl
+        </div>
+        <div className="flex items-center justify-center text-sm text-gray-600">
+          <Mail className="w-4 h-4 mr-2 text-blue-500" />
+          TODO: Konrad
+        </div>
+        <div className="flex items-center justify-center text-sm text-gray-600">
+          <Mail className="w-4 h-4 mr-2 text-blue-500" />
+          mikolaj.langner@pwr.edu.pl
+        </div>
+      </div>
+    </div>
+  </Card>
+</section>
       </main>
 
       {/* Footer */}
@@ -353,7 +374,7 @@ const Index = () => {
               <span className="text-xl font-bold text-gray-900">AggTruth</span>
             </div>
             <p className="text-gray-500 mb-2">Real-Time Hallucination Detection for Language Models</p>
-            <p className="text-sm text-gray-400">ICCS 2025 • Wrocław University of Science and Technology</p>
+            <p className="text-sm text-gray-400">Wrocław University of Science and Technology</p>
           </div>
         </div>
       </footer>

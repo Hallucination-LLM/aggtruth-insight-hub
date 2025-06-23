@@ -140,7 +140,7 @@ const Index = () => {
     <img
       src={`${import.meta.env.BASE_URL}sum.png`}
       alt="Sum formula"
-      className="scale-29 object-contain"
+      className="scale-[0.29] object-contain"
     />
   </div>
 
@@ -148,7 +148,7 @@ const Index = () => {
     <img
       src={`${import.meta.env.BASE_URL}cossim.png`}
       alt="CosSim formula"
-      className="scale-64 object-contain"
+      className="scale-[0.64] object-contain"
     />
   </div>
 
@@ -156,7 +156,7 @@ const Index = () => {
     <img
       src={`${import.meta.env.BASE_URL}entropy.png`}
       alt="Entropy formula"
-      className="scale-58 object-contain"
+      className="scale-[0.58] object-contain"
     />
   </div>
 

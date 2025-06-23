@@ -334,7 +334,7 @@ const Index = () => {
       </div>
       <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact & Credits</h2>
       <p className="text-gray-700 mb-4">
-        Created by a student AI research team at <strong>Wrocław University of Science and Technology</strong>.
+        Created by a Skibidi Σ AI Research Team at <strong>Wrocław University of Science and Technology</strong>.
       </p>
       <p className="text-gray-700 mb-8">
         Supervised by Jan Kocoń, Phd

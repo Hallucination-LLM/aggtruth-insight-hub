@@ -61,10 +61,12 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" variant="outline" href="https://arxiv.org/abs/2506.18628">
-                <FileText className="w-5 h-5 mr-2" />
-                Read Paper
-              </Button>
+              <a href="https://arxiv.org/abs/2506.18628" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" variant="outline">
+                  <FileText className="w-5 h-5 mr-2" />
+                  Read Paper
+                </Button>
+              </a>
             </div>
           </div>
         </div>

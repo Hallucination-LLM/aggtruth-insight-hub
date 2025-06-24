@@ -61,7 +61,7 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" variant="outline">
+              <Button size="lg" variant="outline" href="https://arxiv.org/abs/2506.18628">
                 <FileText className="w-5 h-5 mr-2" />
                 Read Paper
               </Button>
@@ -298,7 +298,7 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: BookOpen, title: "Paper (ICCS 2025)", desc: "PDF Document", color: "blue", url: "https://example.com/paper.pdf" },
+              { icon: BookOpen, title: "Paper (ICCS 2025)", desc: "PDF Document", color: "blue", url: "https://arxiv.org/pdf/2506.18628" },
               { icon: FileImage, title: "Poster", desc: "AI Forum Poster", color: "green", url: "poster.pdf" },
               { icon: FileText, title: "Piotr Matys - Thesis", desc: "PDF Document", color: "orange", url: "thesis_piotrek.pdf" },
               { icon: FileText, title: "Konrad Kiełczyński - Thesis", desc: "PDF Document", color: "orange", url: "thesis_konrad.pdf" },
